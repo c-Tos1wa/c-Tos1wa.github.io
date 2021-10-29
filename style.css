@@ -21,7 +21,7 @@ body{
 }
 
 .body {
-  background-color: #FF5A5F;
+  background-color: #fe9ac7;
   display: flex;
   flex-direction:row-reverse;
   justify-content: space-evenly;
@@ -31,6 +31,7 @@ body{
 
 .body .image{
   margin-top: 16px;
+  height: auto;
 }
 
 .characteristics {
@@ -38,10 +39,15 @@ body{
   flex-direction: column;
   align-items: center;
   flex-wrap: wrap; 
+  font-size: 25px;
 }
 
-.age-status{
-  font-size: 25px;  
+.age{
+  font-size: inherit;  
+}
+
+.status{
+  font-size: inherit;
 }
 
 .button {
@@ -84,7 +90,11 @@ body{
   }
 
   .body .button {
-    margin: 15px;
+    margin: 15px 0;
+  }
+
+  .characteristics .age-status{
+    font-size: 18px;
   }
 
   .footer {
