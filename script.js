@@ -3,28 +3,30 @@ const img = document.getElementById('figure');
 const text = document.querySelector('.status');
 const text2 = document.querySelector('.age');
 
+function whatChange(color, path, status, age){
+  bgColor.style.backgroundColor = `${color}`
+  img.setAttribute('src', `${path}`)
+  text.innerHTML = `<strong>Estágio</strong>: ${status}`
+  text2.innerHTML = `<strong>Idade</strong>: ${age}`
+}
 
 function changeAvatar(){
 
   if (img.src.match("./images/monica_baby.png")) {
-    bgColor.style.backgroundColor = '#ff5a5f';
-    img.setAttribute('src', './images/monica.png');
-    text.innerHTML = '<strong>Estágio</strong>: criança';
-    text2.innerHTML = '<strong>Idade</strong>: 7 anos'
+
+    whatChange('#ff5a5f', './images/monica.png', 'criança', '7 anos' )
+   
   } 
 
   else if (img.src.match('./images/monica.png')){
-    bgColor.style.backgroundColor = "#e40043";  
-    img.setAttribute('src', './images/monica_jovem.png');
-    text.innerHTML = '<strong>Estágio</strong>: jovem';
-    text2.innerHTML = '<strong>Idade</strong>: 16 anos';
+
+    whatChange("#f06449", './images/monica_jovem.png', 'jovem', '16 anos' )
+  
   } 
   
   else if (img.src.match('./images/monica_jovem.png')){
-    bgColor.style.backgroundColor = '#fe9ac7';
-    img.setAttribute('src', './images/monica_baby.png');
-    text.innerHTML = '<strong>Estágio</strong>: bebê';
-    text2.innerHTML = '<strong>Idade</strong>: 1 ano';
+
+    whatChange('#fe9ac7', './images/monica_baby.png', 'bebê', '1 ano' )
   } 
 
 }
